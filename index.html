@@ -4,36 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroTech: Innovación que riega el futuro</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-      <div class="logo">
-        <h2 class="nombre-empresa">AgroTech</h2> 
+<body class="Montserrat" bgcolor="#5B8A6F">
+    <header class="page-header">
+        <h1>AgroTech: Innovación que riega el futuro</h1>
+        <nav class="page-navbar">
+          <ul class="navbar-ul">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="version1.html">Versión 1</a></li>
+            <li><a href="version2.html">Versión 2</a></li>
+          </ul>
+        </nav>
+    </header>
+    <section class="banner">
+      <div class ="banner-content">
+        <h1>Bienvenidos a AgroTech</h1>
+        <p>Innovando la agricultura con soluciones tecnológicas avanzadas</p>
+        <a href="version1.html" class="banner-button">Conoce la Versión 1</a>
       </div>
-
-      <div class="contenedor">
-          <nav>
-            <ul class="direcion">
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="version1.html">Versión 1</a></li>
-              <li><a href="version2.html">Versión 2</a></li>
-            </ul>        
-          </nav>        
-        </div>
-      </header>
+    </section>
     <main>
-        <section>
-            <h2>Bienvenidos a AgroTech</h2>
+        <div class="main-col">
+          <section class="main-top">
+            <h2>AgroTech</h2>
             <p>Explora cómo estamos innovando en la gestión del riego agrícola a través de la tecnología.</p>
-        </section>
-        <section>
-            <h3>Acerca del Proyecto</h3>
+            <div>
+              <img class="infoImg" src="images/Arduino.png">
+              <img class="infoImg" src="images/JardinBotanico.png">
+            </div>
+          </section>
+          <section class="main-bottom">
+            <h4>Acerca del Proyecto</h4>
             <p>Este proyecto tiene como objetivo optimizar el uso del agua en la agricultura mediante la implementación de tecnologías modernas como Arduino y Java.</p>
-        </section>
+            <img class="infoImg2" src="images/Cultivos.png">
+          </section>
+        </div>
+        <div class="col-one">
+        	<h2>Primera Versión del Proyecto</h2>
+            <p>En la primera versión del proyecto, implementamos un sistema de riego automatizado utilizando:</p>
+              <ul>
+                <li>Arduino como el controlador central.</li>
+                <li>Sensores de humedad del suelo para determinar cuándo regar.</li>
+                <li>Sensores de temperatura ambiente para monitorear el clima.</li>
+                <li>Una pantalla LCD para mostrar los datos en tiempo real.</li>
+                <li>Un programa en el IDE de Arduino para procesar y visualizar los datos.</li>
+              </ul>
+            <img class="infoImg3" src="images/prototipo.png">
+        </div>
+        <div class="col-two">
+            <h2>Segunda Versión del Proyecto</h2>
+            <p>En esta versión, hemos ampliado el proyecto para incluir:</p>
+            <ul>
+                <li>La transformación de los datos recolectados en un archivo de texto plano.</li>
+                <li>El desarrollo de una aplicación en Java para cargar estos archivos y agregar información adicional.</li>
+                <li>La generación de un registro detallado en formato JSON, integrando tanto los datos de los sensores como los aportados por el usuario.</li>
+            </ul>
+        <img class="infoImg3" src="images/prototipoAPP.png">
+        </div>
     </main>
     <footer>
-        <p>&copy; 2024 AgroTech. Todos los derechos reservados.</p>
-    </footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <h4>AgroTech: Innovación que riega el futuro</h4>
+            <p>Desarrollamos soluciones tecnológicas para mejorar la eficiencia del riego en la agricultura.</p>
+        </div>
+
+        <div class="footer-links">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="version1.html">Versión 1</a></li>
+                <li><a href="version2.html">Versión 2</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        © 2024 AgroTech. Todos los derechos reservados.
+    </div>
+</footer>
 </body>
 </html>
