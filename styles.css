@@ -1,57 +1,310 @@
-*{
+/*
+  Estilos Globales
+*/
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+* {
 	box-sizing: border-box;
 	text-decoration: none;
-    list-style: none;
+  font-family: Montserrat;
+}
+
+body {
 	margin: 0;
 }
-body{
-	margin: 0;
-}
+
 a{
 	text-decoration: none;
 	color: white;
 }
-header{
-    display: flex;
-	height: 70px;
+
+/*
+  Clases del header
+*/
+
+.page-header {
+  display: flex;
+  flex-direction: row;
 	justify-content: space-between;
-	background-color: #006400;
 	align-items: center;
-	padding: 0 50px;
-	
+	width: 100%;
+  height: max-content;
+	padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: #FFF;
+  font-size: 1.5rem;
 }
 
-.logo{
-	color:white ;
-	font-size: 25px;
-	font-family:serif;
+.page-navbar {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
-.nombre-empresa{
-	font-family: 'Times New Roman', Times, serif;
-	padding-left: 20px;
-	padding-top: 0px;
-}
-.contenedor{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 700px;
-	height: 40PX;
-	margin-top: 0  auto;
-	margin-right: 480PX;
-	
-}
-.direcion{
-	display: flex;
-	flex-direction: row;
+.navbar-ul {
+  display: inherit;
+  gap: 16px;
+  padding: 0;
+
+  a:hover {
+    color: #006400;
+  }
 }
 
-nav a{
-	font-family:"Montserrat",sans-serif;
-	font-weight: 1000;
-	font-size: 15px;
-	padding-right: 100px;
+/*
+  Clases Banner
+*/
+
+.banner{
+  position: relative;
+	width: 100%;
+	height: 400px;
+  background-image: url('images/Banner.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: #ffffff;
+  overflow: hidden;
 }
-nav a:hover{
-	color: black;
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    filter: blur(5px);
+}
+
+.banner-content {
+  background: rgba(132, 168, 147, 0.40);
+  border-radius: 15px;
+  padding: 20px 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(37, 62, 65, 0.3);
+}
+
+.banner-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.banner-content p {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+}
+
+.banner-button {
+    padding: 10px 20px;
+    background-color: #253e41;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.banner-button:hover {
+    background-color: #355A5C;
+}
+/*
+  Clases Body
+*/
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+  margin: 40px 0px;
+}
+
+.main-col{
+	width: 44%;
+  background: rgba(37, 62, 65, 0.7);
+  border-radius: 15px;
+  padding: 20px 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.main-col section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:20px;
+  color: #FFF;
+  text-align: center;
+}
+
+.main-top, .main-bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+.col-one {
+	width: 26%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+	background: rgba(69, 111, 108, 0.7);
+  border-radius: 15px;
+  padding: 20px 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.col-two {
+	width: 26%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgba(47, 70, 71, 0.7);
+  border-radius: 15px;
+  padding: 20px 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.infoImg{
+	width: 40%;
+	height: 200px;
+	border-radius: 15px;
+	margin-left: 30px;
+}
+
+.infoImg2{
+	width: 90%;
+	border-radius: 15px;
+	margin-left: 20px;
+}
+
+.infoImg3{
+	width: 80%;
+	border-radius: 15px;
+	margin-left: 30px;
+	margin-top: 10px;
+}
+
+/*
+  Clases del Footer
+*/
+
+footer {
+    background: rgba(47, 70, 71, 0.40);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.footer-info {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.footer-info h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    font-size: 14px;
+    margin: 0;
+    color: #ffffff;
+}
+
+
+.footer-links {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+    color: #32CD32;
+    transition: color 0.3s ease;
+}
+
+
+.footer-social {
+    flex: 1;
+    text-align: right;
+    padding: 20px;
+}
+
+.footer-social a {
+    margin-left: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #32CD32;
+}
+.footer-copyright {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #ffffff;
 }
